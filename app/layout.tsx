@@ -27,6 +27,13 @@ export const metadata: Metadata = {
   title: "Boomiga S | Brand & UI/UX Designer",
   description:
     "Portfolio of Boomiga S — a UI/UX and brand designer based in Madurai, passionate about creating seamless digital experiences.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
