@@ -130,27 +130,29 @@ export default function Preloader() {
             }}
           />
 
-          {/* Staggered Letters with Split Mask */}
-          <div className="relative overflow-hidden py-3 px-2 sm:px-4 flex items-center justify-center flex-nowrap whitespace-nowrap max-w-full">
-            {"BOOMIGA".split("").map((letter, i) => (
-              <span
-                key={i}
-                className="inline-block text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white tracking-[-0.02em] select-none uppercase transition-transform"
-                style={{
-                  animation: `letterReveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards`,
-                  animationDelay: `${0.08 + i * 0.05}s`,
-                  opacity: 0,
-                  transform: "translateY(110%)",
-                }}
-              >
-                {letter}
-              </span>
-            ))}
+          {/* Staggered Letters with Split Mask & Unclipped Glowing Dot */}
+          <div className="relative py-3 px-2 sm:px-4 flex items-center justify-center flex-nowrap whitespace-nowrap max-w-full">
+            <div className="relative overflow-hidden flex items-center flex-nowrap">
+              {"BOOMIGA".split("").map((letter, i) => (
+                <span
+                  key={i}
+                  className="inline-block text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white tracking-[-0.02em] select-none uppercase transition-transform"
+                  style={{
+                    animation: `letterReveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards`,
+                    animationDelay: `${0.08 + i * 0.05}s`,
+                    opacity: 0,
+                    transform: "translateY(110%)",
+                  }}
+                >
+                  {letter}
+                </span>
+              ))}
+            </div>
 
-            {/* Glowing Lime Dot */}
-            <span className="relative inline-flex items-center justify-center ml-1.5 sm:ml-3">
+            {/* Glowing Lime Dot (Outside overflow-hidden so its 360° glow and ping shadow never clip on the right) */}
+            <span className="relative inline-flex items-center justify-center ml-2 sm:ml-4 p-2 sm:p-3 overflow-visible">
               <span
-                className="w-2.5 h-2.5 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full bg-[#AAFF00] inline-block shadow-[0_0_20px_#AAFF00]"
+                className="w-2.5 h-2.5 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full bg-[#AAFF00] inline-block shadow-[0_0_25px_#AAFF00] shrink-0"
                 style={{
                   animation: "dotPopIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.5s",
                   opacity: 0,
