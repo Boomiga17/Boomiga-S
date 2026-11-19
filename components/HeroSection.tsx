@@ -43,7 +43,7 @@ export default function HeroSection() {
         <div className="lg:hidden absolute inset-0 bg-gradient-to-t from-black via-black/95 via-50% to-transparent z-10" />
 
         {/* Desktop Image */}
-        <div className="hidden lg:block relative w-full h-full -translate-y-2 lg:-translate-y-4">
+        <div className="hidden lg:block relative w-full h-full">
           <Image
             src="/assets/home/boomiga-desktop.png"
             alt="Boomiga S"
@@ -56,7 +56,7 @@ export default function HeroSection() {
         </div>
 
         {/* Mobile / Tablet Image */}
-        <div className="lg:hidden relative w-full h-full -translate-y-2">
+        <div className="lg:hidden relative w-full h-full">
           <Image
             src="/assets/home/boomiga.png"
             alt="Boomiga S"
@@ -64,7 +64,7 @@ export default function HeroSection() {
             priority
             sizes="100vw"
             quality={95}
-            className="object-cover object-[center_top] opacity-90 select-none sharp-img"
+            className="object-cover object-[center_top] opacity-95 select-none sharp-img"
           />
         </div>
       </div>
