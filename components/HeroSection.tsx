@@ -37,13 +37,13 @@ export default function HeroSection() {
         <div className="hidden lg:block absolute inset-y-0 left-0 w-32 sm:w-64 bg-gradient-to-r from-black via-black/80 to-transparent z-10" />
         {/* Bottom-edge smooth fade into black */}
         <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black via-black/85 to-transparent z-10" />
-        {/* Top-edge subtle vignette (reduced height to keep hair & face bright and clear) */}
-        <div className="absolute inset-x-0 top-0 h-16 sm:h-20 bg-gradient-to-b from-black/50 via-black/15 to-transparent z-10" />
+        {/* Top-edge subtle vignette (mobile only so desktop portrait stays bright and clear) */}
+        <div className="lg:hidden absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/50 via-black/15 to-transparent z-10" />
         {/* Mobile deep gradient overlay: keeps upper face crystal clear, smoothly masks suit to pitch black for text */}
         <div className="lg:hidden absolute inset-0 bg-gradient-to-t from-black via-black/95 via-50% to-transparent z-10" />
 
         {/* Desktop Image */}
-        <div className="hidden lg:block relative w-full h-full">
+        <div className="hidden lg:block relative w-full h-full translate-y-3 lg:translate-y-6">
           <Image
             src="/assets/home/boomiga-desktop.png"
             alt="Boomiga S"
