@@ -737,6 +737,7 @@ export default function WorkSection() {
                         alt={`${p.title} Preview`}
                         className="w-full h-full object-cover object-center transition-transform duration-500 select-none group-hover:scale-[1.02]"
                         loading="lazy"
+                        decoding="async"
                       />
 
                       {/* Subtle hover overlay */}
@@ -897,6 +898,7 @@ export default function WorkSection() {
                         alt={item.title}
                         className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
+                        decoding="async"
                       />
 
                       {/* Corner Badging */}
@@ -941,6 +943,7 @@ export default function WorkSection() {
                       alt={item.title}
                       className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
+                      decoding="async"
                     />
 
                     {/* Corner Badging */}
@@ -1022,6 +1025,7 @@ export default function WorkSection() {
                 src={selectedGraphic.image}
                 alt={selectedGraphic.title}
                 className="max-h-[60vh] max-w-full object-contain rounded border border-white/10 shadow-2xl"
+                decoding="async"
               />
             </div>
 

@@ -47,7 +47,8 @@ export default function HeroSection() {
           alt="Boomiga S"
           fill
           priority
-          unoptimized
+          sizes="(max-width: 1024px) 100vw, 55vw"
+          quality={85}
           className="object-cover object-[center_top] lg:object-[center_10%] opacity-90 sm:opacity-95 lg:opacity-95 select-none sharp-img"
         />
       </div>
