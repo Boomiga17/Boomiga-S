@@ -42,15 +42,31 @@ export default function HeroSection() {
         {/* Mobile deep gradient overlay: keeps upper face crystal clear, smoothly masks suit to pitch black for text */}
         <div className="lg:hidden absolute inset-0 bg-gradient-to-t from-black via-black/95 via-50% to-transparent z-10" />
 
-        <Image
-          src="/assets/home/boomiga.png"
-          alt="Boomiga S"
-          fill
-          priority
-          sizes="(max-width: 1024px) 100vw, 55vw"
-          quality={85}
-          className="object-cover object-[center_top] lg:object-[center_10%] opacity-90 sm:opacity-95 lg:opacity-95 select-none sharp-img"
-        />
+        {/* Desktop Image */}
+        <div className="hidden lg:block relative w-full h-full">
+          <Image
+            src="/assets/home/boomiga-desktop.png"
+            alt="Boomiga S"
+            fill
+            priority
+            sizes="55vw"
+            quality={90}
+            className="object-cover object-[center_top] opacity-95 select-none sharp-img"
+          />
+        </div>
+
+        {/* Mobile / Tablet Image */}
+        <div className="lg:hidden relative w-full h-full">
+          <Image
+            src="/assets/home/boomiga.png"
+            alt="Boomiga S"
+            fill
+            priority
+            sizes="100vw"
+            quality={85}
+            className="object-cover object-[center_top] opacity-90 select-none sharp-img"
+          />
+        </div>
       </div>
 
       {/* ── Top Header Bar (Clean & Minimal Original Design) ── */}
